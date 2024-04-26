@@ -9340,6 +9340,10 @@ textarea.form-control {
         color: #fff; }
         .blog-entry .text .heading a:hover, .blog-entry .text .heading a:focus, .blog-entry .text .heading a:active {
           color: #ffbd39; }
+        #videoLink:hover{
+          cursor: pointer;
+          color: #ffbd39;
+        }
   .blog-entry .meta {
     display: inline-block;
     margin-right: 5px;

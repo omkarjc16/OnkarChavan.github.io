@@ -447,10 +447,9 @@
 							style="background-image: url('images/Relive.jpg');">
 						</a>
 						<div class="text mt-3 float-right d-block">
-
-							<h3 class="heading"><a href="#project-section">
+							<h3 class="heading" id="videoLink">
 									'ReLive' An Immersive 17+ Games Platform That Encourages to do Physical
-									Activity.</a></h3>
+									Activity.</h3>
 							<p>On this platform we builds Diffrent Types of Game Using Frontend Technologies and
 								for controlling that Games we uses Movement detection Models,
 								after playing of game body analysis also there as like focus, decsion making,problem
@@ -460,17 +459,28 @@
 						</div>
 					</div>
 					<script>
-						document.getElementById('openVideo').addEventListener('click', function (event) {
-							event.preventDefault(); // Prevent the default action of the anchor tag
+						// Function to open the video popup
+						function openVideoPopup() {
 							var videoUrl = 'https://www.youtube.com/embed/-sVOvn0wfv0';
 							var width = 800;
 							var height = 600;
-							console.log(videoUrl);
 							var left = (window.innerWidth - width) / 2;
 							var top = (window.innerHeight - height) / 2;
 							var popup = window.open('', 'popup', 'width=' + width + ',height=' + height + ',left=' + left + ',top=' + top);
 							var htmlContent = '<iframe width="100%" height="100%" src="' + videoUrl + '" frameborder="0" allowfullscreen></iframe>';
 							popup.document.write(htmlContent);
+						}
+					
+						// Add click event listener to the anchor tag
+						document.getElementById('openVideo').addEventListener('click', function(event) {
+							event.preventDefault(); // Prevent the default action of the anchor tag
+							openVideoPopup();
+						});
+					
+						// Add click event listener to the h3 tag
+						document.getElementById('videoLink').addEventListener('click', function(event) {
+							event.preventDefault(); // Prevent the default action of the anchor tag
+							openVideoPopup();
 						});
 					</script>
 				</div>
